@@ -95,7 +95,11 @@ export class ProveedorService {
   }
 
   
-
+  eleminarProveedor(proveedor:Proveedor): Observable<any[]>
+  {
+    let response1 = this.http.delete<Proveedor[]>(this.proveedoresUrl+"/"+proveedor.id.toString()).subscribe((proveedors) => this.proveedor$.next(proveedors));
+    return forkJoin([response1]);
+  }
 
   buscaProveedor(proveedor: Proveedor): Observable<Proveedor> 
   {

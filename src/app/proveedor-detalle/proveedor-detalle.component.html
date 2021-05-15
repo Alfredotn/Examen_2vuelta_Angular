@@ -10,6 +10,12 @@
     <div>
       <label for="proveedor-id">Id Proveedor: </label>
       <input id="proveedor-id" [(ngModel)]="proveedor.id" placeholder="id">
-    </div>   
+    </div>  
+    
+    <mat-card>
+         <button class="add-button" (click)="eliminar(persona);" >
+        Eliminar un proveedor
+      </button>
+      </mat-card>
 </div>
 
